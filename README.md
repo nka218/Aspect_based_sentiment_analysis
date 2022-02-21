@@ -44,14 +44,14 @@ neurtal aspect :- **staff** ( talking about staff with ok means neutral while ta
 1. File Format should be either .csv or .json.
 2. In any of the file there should be a column named "reviewText",where all the reviews should be kept and gender.
 3. Example files are kept under src/test folder upload any text file from there.
-4. 
+
 ![Screenshot](https://github.com/nka218/Aspect_based_sentiment_analysis/blob/main/root_img/55.png)
 
 # Output:- 
 1. High level visualization of sentiments.
-2. graph 1 shows overall proportion os sentiment across all reviews converted into sentences.
+2. graph 1 shows overall proportion of sentiments across all reviews.
 3. graph 2 shows count of the lexicon words in the reviews.
-4. graph 3 shows the gender contribution of aspect based sentiment in reviews.
+4. graph 3 shows the gender proportion in reviews.
 5. graph 4 shows the genderwise contribution of aspect based sentiment in reviews.
 
 ![Screenshot](https://github.com/nka218/Aspect_based_sentiment_analysis/blob/main/root_img/graphs.png)
