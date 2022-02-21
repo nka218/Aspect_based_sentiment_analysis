@@ -1,0 +1,81 @@
+
+{% extends 'base.html' %}
+
+{% block content1 %}
+
+   	body, html {
+  height: 100%;
+  margin: 0;
+}
+.swing {
+    animation: swing ease-in-out 1s infinite alternate;
+    transform-origin: center 100px;
+    float:left;
+    box-shadow: 5px 5px 10px rgba(0.5,0.5,0.5,1.5);
+}
+.swing img {
+    border: 10px solid #f8f8f8;
+    display: block;
+}
+
+ 
+@keyframes swing {
+    0% { transform: rotate(5deg); }
+    100% { transform: rotate(-5deg); }
+}
+  
+
+.bg{
+  /* The image used */
+
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.sidenav {
+  height: 100%;
+  width: 200px;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+{% endblock %}
+
+
+{% block content %}
+<div class="bg">
+<div class="container-sm" style="padding-top: 5px; margin-bottom: -15px; height: 100%px; padding-left: 50px; padding-right: 50px; width: 100%" >
+  <p><h3 style="color: red; fo">Overview</h3> </p>
+  <p style="color: black;">
+  Sentiment analysis is contextual mining of text which identifies and extracts subjective information in source material, and helping a business to understand the social sentiment of their brand, product or service while monitoring conversations and reviews. We are using aspect based sentiment analysis. 
+Aspect-based sentiment analysis is a text analysis technique that breaks down text into aspects (attributes or components of a product or service), and then allocates each one a sentiment level (positive, negative or neutral). </p>
+	<p><h3 style="color: red; fo">Objective</h3> </p>
+	<p style="color: black;">   
+  This tool allows us to identify sentiments of the customer from their reviews given on the hotel portal.
+Along with the customers sentiment about the service and offerings given by the hotel. </p><br><br>
+	<div class="row" style="height: 100%">
+    <form action="file" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input style="padding-left: 350px; color: red;" type="file" name="myfile">
+    <button style="background-color: green;" class="w3-button w3-black w3-round-large" type="submit">Upload</button>
+  </form>
+</div><br><br>
+<p><pre style="color: black; font-size: 20px;"> Note :
+  <p style="font-size: 15px; color:black; padding-left: 30px;">1. File Format should be either .csv or .json.
+2. In any of the file there should be a column named "reviewText",where all the reviews should be kept.</p></pre></p>
+
+ </div>
+
+
+</div>
+{% endblock %}
+

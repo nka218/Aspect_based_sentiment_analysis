@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+
+{% block content1 %}
+  body, html {
+  height:100%;
+  margin: 0;
+}
+
+.hov1{
+
+margin-left:30px;
+  }
+
+.bg{
+  height: 100%; 
+}
+.im{
+  margin-right: 100px;
+  height:400px;
+  width:800px;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.sidenav a {
+	padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #818181;
+  display: block;
+}
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  background-image: url("/media/SENTIMENT.jpg");
+  background-color: #cccccc;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-left: -20px; /* Same as the width of the sidenav */
+  /* Increased text to enable scrolling */
+
+}
+.text {
+  margin-left: -50px; 
+  background-color: black; 
+  color: white; 
+  font-size: 17px; 
+  margin-top: 20px; 
+  margin-right: 30px; 
+  padding-left: 20px;
+
+}
+.graph{
+  margin-right: 30px; 
+  margin-left: 10px; 
+  margin-top:20px;
+
+}
+
+
+{% endblock %}
+
+{% block content %}
+
+<div class="bg">
+  <div class="row" style="height: 100%">
+    <div class="col-2">
+      <div class="sidenav">
+        <a href="all">Overall Sentiment</a>
+        <a href="positive">Top Positive Words</a>
+        <a href="negative">Top Negative Words</a>
+        <a href="neutral">Top Neutral Words</a>
+    </div>
+    </div>
+
+  <div class="col-10" >
+    <div class="main">
+    <ul class="navbar-nav mr-auto">
+      <li class="hov1">
+             <form action='/dist',method='get' style="margin-left: 10px;">
+        <h6 style="color: red; padding-left: 5px; margin-top: 20px;"> Select Aspects </h6>
+  <select id="poas1"  name="poas1" style="text-align:center; margin-left: 5px;">
+       {% for i in aspcts %}
+    <option value="{{i}}" selected>{{i}}</option>
+     {% endfor %}
+     </select>
+       <select id="poas2"  name="poas2" style="text-align:center; margin-left: 5px;">
+       {% for i in aspcts %}
+    <option value="{{i}}" selected>{{i}}</option>
+     {% endfor %}
+     </select>
+       <select id="poas3"  name="poas3" style="text-align:center; margin-left: 5px;">
+       {% for i in aspcts %}
+    <option value="{{i}}" selected>{{i}}</option>
+     {% endfor %}
+     </select>
+            <select id="poas4"  name="poas4" style="text-align:center; margin-left: 5px;">
+       {% for i in aspcts %}
+    <option value="{{i}}" selected>{{i}}</option>
+     {% endfor %}
+     </select>
+            <select id="poas5"  name="poas5" style="text-align:center; margin-left: 5px;">
+       {% for i in aspcts %}
+    <option value="{{i}}" selected>{{i}}</option>
+     {% endfor %}
+     </select><br><br>
+
+      <center><button style="background-color: green; margin-left: -130px;" class="btn btn-secondary" type="submit">Get Graph</button><br></center>
+</form> 
+      </li>
+    </ul>
+
+  {% if graph%}
+<div class="graph">
+{{ graph|safe }}
+</div>
+{% endif %}
+
+</div>  
+  </div> 
+</div>
+</div>
+
+
+{% endblock %}

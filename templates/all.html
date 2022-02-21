@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% block content1 %}
+  body, html {
+  height:100%;
+  margin: 0;
+}
+
+
+.bg{
+  height: 100%; 
+
+}
+
+.sidenav {
+  height: 100%;
+  width: 220px;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.sidenav a {
+	padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #818181;
+  display: block;
+}
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  background-image: url("/media/SENTIMENT.jpg");
+  background-color: #cccccc;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-left: 0px; /* Same as the width of the sidenav */
+  /* Increased text to enable scrolling */
+
+}
+.text {
+  margin-left: -50px; 
+  background-color: black; 
+  color: white; 
+  font-size: 17px; 
+  margin-top: 20px; 
+  margin-right: 30px; 
+  padding-left: 20px;
+
+}
+.graph{
+  margin-right: 30px; 
+  margin-left: 20px; 
+  padding-top:50px;
+
+}
+
+
+
+{% endblock %}
+    {% block content2 %}
+
+<li class="hov">
+        <a class="nav-link" href="search">Search Hotel</a>
+      </li>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="bg">
+<div class="row" style="height: 100%">
+  <div class="col-2">
+    <div class="sidenav">
+      <a href="positive">Top Positive Words</a>
+      <a href="negative">Top Negative Words</a>
+      <a href="neutral">Top Neutral Words</a>
+      <a href="dist" >Aspect wise Sentiments</a>
+
+    </div>
+    </div>
+
+  <div class="col-10" >
+    <div class="main">
+  {% if graph %}
+<div class="graph" >
+{{ graph|safe }}
+</div>
+{% endif %}
+  
+</div>  
+  </div> 
+</div>
+</div>
+
+
+{% endblock %}
