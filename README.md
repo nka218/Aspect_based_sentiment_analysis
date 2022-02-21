@@ -2,7 +2,7 @@
 Aspect-Based Sentiment Analysis (ABSA) is a type of text analysis that categorizes opinions by aspect and identifies the sentiment related to each aspect.
 By aspects, we consider attributes or components of an text review (food or a service, staff etc).
 
-Let’s use an example like the one below. The goal here for the ABSA system is to identify the aspects – food,service,staff – with their related sentiment. 
+Let’s take an example like the one below. The goal here for the ABSA system is to identify the aspects – food,service,staff – with their related sentiment. 
 In other words, <br /> 
 food: positive, <br />
 service: negative <br />
@@ -24,3 +24,27 @@ neurtal aspect :- staff ( talking about staff with ok means neutral while talkin
   2. Make sense of negative, positive, and words present in the review for a particular aspect. Visualization of positive negative word counts using lexicons.
   3. Find the aspects in the hotel review and divide them into positive, negative, or neutral aspects based on sentiment analysis.
   4. Also, integrate it with any text for its aspect and its sentiment analysis. Create a dashboard for the visualization of the sentiments for the aspects in the review, distribution of the emotions in the reviews using lexicon, visualization of the sentences corresponding to the aspects.
+
+
+# Directory Structure:
+
+	|- root directory
+		|- media
+		|- Nrc-paper
+		|- root_img
+		|-sentiment_analysis
+		|- src
+		|- templates
+		|- manage.py
+		|- requirements.txt
+		|- db.sqlite3 
+		
+
+# Input:- 
+1. File Format should be either .csv or .json.
+2. In any of the file there should be a column named "reviewText",where all the reviews should be kept and gender.
+3. Example files are kept under src/test folder upload any text file from there.
+
+# Output:- 
+1. High level visualization of sentiments.
+2. graph 1 shows   
