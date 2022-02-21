@@ -63,3 +63,14 @@ neurtal aspect :- **staff** ( talking about staff with ok means neutral while ta
 #### neutral aspects with sentence having that aspect (shown only one out of all the sentences corresponding to neutral aspect)
 
 ![Screenshot](https://github.com/nka218/Aspect_based_sentiment_analysis/blob/main/root_img/22.png)
+
+
+		
+# How to use API:
+
+1. Clone the **Aspect_based_sentiment_analysis** from Github repsitiory.
+2. Extract the cloned zip file.
+3. Run pip install -r requirements.txt.
+4. Run python manage.py runserver 8000
+5. Open the link and upload any of the file from src/test folder.
+6. use different options there for high level visualization of aspects in the review.
