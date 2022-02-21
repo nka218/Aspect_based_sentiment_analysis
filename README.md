@@ -15,7 +15,7 @@ I was offerd a food here in this hotel, I was offered **good food** with sushi a
 
 Notice that in the same text, different aspects can have different sentiments. In this sense, the output of ABSA is not meant to be a general indication of the sentiment expressed in the text but aims at providing a more granular and detailed level of information.  <br />
 positive aspect :- **good food** (talking about food as aspect and giving positive sens.) <br />
-negative aspect :- **bad service** ( talling about service in negative sens.) <br />
+negative aspect :- **bad service** ( talking about service in negative sens.) <br />
 neurtal aspect :- **staff** ( talking about staff with ok means neutral while talking about staff.) <br />
 
 
